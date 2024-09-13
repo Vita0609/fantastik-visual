@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+.border-gradient {
+    border-image: linear-gradient(to right, #3d8bff, #ab23ff) 100% 0;
+}
+
+@font-face {
+    font-family: "MonumentExtended";
+    src: url("../public/fonts/MonumentExtended-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "SatoshiBold";
+    src: url("../public/fonts/Satoshi-Bold.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "SatoshiMedium";
+    src: url("../public/fonts/Satoshi-Medium.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "SatoshiRegular";
+    src: url("../public/fonts/Satoshi-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+
+.font-monument {
+    font-family: "MonumentExtended", sans-serif;
+}
+.font-stsh-bold {
+    font-family: "SatoshiBold", sans-serif;
+}
+.font-stsh-med {
+    font-family: "SatoshiMedium", sans-serif;
+}
+.font-stsh-reg {
+    font-family: "SatoshiRegular", sans-serif;
+}
+
+@layer utilities {
+    .animate {
+        @apply transition-all duration-500;
+    }
+
+    .text-gradient {
+        @apply bg-gradient-to-r from-blue to-purple text-transparent bg-clip-text;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ab23ff;
+}
